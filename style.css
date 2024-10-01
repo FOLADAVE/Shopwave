@@ -1,0 +1,287 @@
+*:root{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    background-color: #fff;
+    font-family: sans-serif;
+}
+.container{
+    width: 1000px;
+    margin: auto;
+    transform: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+.container h1{
+    color: #353434;
+    font-family: sans-serif;
+}
+.container header{
+    display: grid;
+    grid-template-columns: 1fr 50px;
+    margin-top: 10px;
+    padding: 50px 10px;
+}
+
+header .shopping{
+    position: relative;
+    text-align: right;
+}
+.shopping i{
+    font-size: 3rem;
+    color: #111;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    -webkit-transition: all 0.25s ease;
+    -moz-transition: all 0.25s ease;
+    -ms-transition: all 0.25s ease;
+    -o-transition: all 0.25s ease;
+}
+.shopping i:hover{
+    color: green;
+}
+.shopping span{
+    position: absolute;
+    top: -5px;
+    left: 80%;
+    background: red;
+    padding: 3px 10px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container .list{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.card{
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 500px;
+    background: #d1cfcf;
+    border: 1px solid rgb(51, 51, 51);
+    height: 100vh;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition:  0.5s;
+    -ms-transition:  0.5s;
+    -o-transition:  0.5s;
+}
+.active .card{
+    left: calc(100% - 500px);
+}
+.active .container{
+    transform: translateX(-200px);
+    -webkit-transform: translateX(-200px);
+    -moz-transform: translateX(-200px);
+    -ms-transform: translateX(-200px);
+    -o-transform: translateX(-200px);
+}
+.card h1{
+    color: rgb(49, 49, 49);
+    font-weight: 600;
+    margin: 0;
+    padding: 0 20px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+.card .checkOut{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.card .checkOut div{
+    background-color:rgb(2, 148, 2);
+    color: #fff;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+.card .checkOut div:nth-child(2){
+    background-color: #1c1f25;
+    color: #fff;
+}
+.list .item{
+    text-align: center;
+    background-color: #efefef;
+    padding: 20px;
+    box-shadow: 0 50px 50px #757676;
+    letter-spacing: 1px;
+    transition: all 0.5s ease ;
+    -webkit-transition: all 0.25s ease ;
+    -moz-transition: all 0.25s ease ;
+    -ms-transition: all 0.25s ease ;
+    -o-transition: all 0.25s ease ;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    cursor: pointer;
+}
+.item:hover{
+    background-color: gray;
+}
+.list .item:hover{
+    background-color:grey;
+}
+.list .item img{
+    width: 90%;
+    height: 250px;
+}
+.list .item .title{
+    font-weight: 800;
+    font-size: 20px;
+    font-family: sans-serif;
+}
+.list .item .price{
+    margin: 10px;
+    font-weight: 600;
+}
+.list .item:hover .title,
+.list .item:hover .price{
+    color: #111;
+}
+.list .item button{
+    background-color: #fff;
+    color: #111;
+    font-weight: 600;
+    width: 100%;
+    padding: 10px;
+    border: 3px solid gray;
+    border-radius: 8px;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.25s ease;
+    -moz-transition: all 0.25s ease;
+    -ms-transition: all 0.25s ease;
+    -o-transition: all 0.25s ease;
+}
+.list .item button:hover{
+    background-color: gray;
+    color: #fff;
+    border: 2px solid white;
+}
+.listCard li{
+    display: grid;
+    grid-template-columns: 100px repeat(1, 3fr);
+    color: #fff;
+    row-gap: 10px;
+}
+.listCard li div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.listCard li img{
+    width: 90%;
+}
+.listCard .count{
+    margin: 0px 10px;
+    color: #1c1f25;
+}
+.cardTitle,
+.cardPrice{
+    color: #1c1f25;
+    font-weight: 600;
+}
+.cardButton{
+    width: 28px;
+    height: 28px;
+    color: #111;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+}
+@media (max-width: 1050px) {
+    .container .list{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .container{
+        width: 800px;
+    }
+    .list .item img{
+        width: 60%;
+        height: 200px;
+    }
+}
+@media (max-width: 860px){
+    .container{
+        width: 600px;
+    }
+    .list .item img{
+        width: 50%;
+        height: 140px;
+    }
+    .list .item .title{
+        font-weight: 800;
+        font-size: 18px;
+        font-family:'Times New Roman', Times, serif
+    }
+}
+@media (max-width: 680px){
+    .container .list{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .container{
+        width: 400px;
+    }
+    .list .item img{
+        width: 40%;
+        height: 140px;
+    }
+}
+@media (max-width: 500px){
+    .active .card {
+        left: calc(100% - 500px);
+      }
+}
+@media (max-width: 480px){
+    .container{
+        width: 310px;
+    }
+    .list .item img{
+        width: 40%;
+        height: 130px;
+    }
+}
+@media (max-width: 390px){
+    .container{
+        width: 285px;
+    }
+    .list .item img{
+        width: 40%;
+        height: 110px;
+    }
+}
